@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Array</title>
+    <!-- BS4 css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body style="background-color:rgb(53 54 58);">
+    <div class="container" style="margin-bottom: 200px; max-width: 500px;">
+        <div class="w25 mt-5">
+            <!-- Thêm số -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Thêm số</h3>
+                <input type="number" class="form-control" id="num" placeholder="Nhập số n">
+                <button class="btn btn-success mt-3 right" id="btnThem">Thêm số</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result"></p>
+                </div>
+            </div>
+            <hr style="background: white; margin: 50px 0;">
+            <!-- Tổng số dương -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger"> Bài 1: Tổng số dương</h3>
+                <button class="btn btn-success mt-3 right" id="btnTinhTong">Tính tổng</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result1"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- Đếm số dương -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 2: Đếm số dương</h3>
+                <button class="btn btn-success mt-3 right" id="btnDemSo">Đếm số</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result2"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- Tìm số nhỏ nhất -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 3: Tìm số nhỏ nhất</h3>
+                <button class="btn btn-success mt-3 right" id="btnTimMin">Tìm min</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result3"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- Tìm số dương nhỏ nhất -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 4: Tìm số dương nhỏ nhất</h3>
+                <button class="btn btn-success mt-3 right" id="btnTimSoDuongNhoNhat">Tìm số dương nhỏ nhất</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result4"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- Tìm số chẵn cuối mảng -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 5: Tìm số chẵn cuối cùng</h3>
+                <button class="btn btn-success mt-3 right" id="btnTimSoChan">Tìm số chẵn</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result5"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- Đổi chỗ-->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 6: Đổi chỗ</h3>
+                <div class="row">
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="index1" placeholder="Nhập vị trí 1">
+                    </div>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="index2" placeholder="Nhập vị trí 2">
+                    </div>
+                </div>
+                <div class="row justify-content-end pr-3">
+                    <button class="btn btn-success mt-3 right" id="btnDoiCho">Đổi chỗ</button>
+                    <button style="display: none;" class="btn btn-success mt-3 right" id="btnReset">Đổi chỗ</button>
+                </div>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result6"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- Sắp xếp tăng dần -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 7: Sắp xếp tăng dần</h3>
+                <button class="btn btn-success mt-3 right" id="btnSapXep">Sắp xếp</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result7"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- Tìm số nguyên tố đầu tiên -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 8: Tìm số nguyên tố đầu tiên</h3>
+                <button class="btn btn-success mt-3 right" id="btnSoNguyenToDauTien">Tìm số nguyên tố</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result8"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- Đếm số nguyên -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 9: Đếm số nguyên</h3>
+                <input type="number" class="form-control" id="num1" placeholder="Nhập số">
+                <button class="btn btn-success mt-3 right" id="btnThem1">Thêm số</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result9"></p>
+                </div>
+                <button class="btn btn-success mt-3 right" id="btnDemSoNguyen">Đếm số nguyên</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result10"></p>
+                </div>
+            </div>
+            <hr style="background: white;margin: 50px 0">
+            <!-- So sánh số lượng số âm và dương -->
+            <div class="form-group text-right">
+                <h3 class="text-left alert alert-danger">Bài 10: So sánh số lượng số âm và dương</h3>
+            <button class="btn btn-success mt-3 right" id="btnSoSanh">So sánh</button>
+                <div class="alert alert-success mt-3 text-left">
+                    <p id="result11"></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- Jquery  -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- BS4 js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <!-- main js -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
